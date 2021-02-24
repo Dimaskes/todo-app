@@ -1,6 +1,6 @@
 import './App.css';
 
-import Header from './components/Header';
+import Sidebar from './components/Sidebar';
 import AddNewTodo from './components/AddNewTodo';
 import User from './components/User';
 import Calendar from './components/Calendar';
@@ -13,12 +13,12 @@ import EditTodo from './components/EditTodo';
 function App() {
   return (
     <div className='App'>
-      <Header>
+      <Sidebar>
         <User />
         <AddNewTodo />
         <Calendar />
         <Projects />
-      </Header>
+      </Sidebar>
       <Main>
         <Todos />
         <EditTodo />
