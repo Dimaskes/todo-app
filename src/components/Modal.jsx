@@ -6,12 +6,14 @@ const Modal = ({ children, showModal, setShowModal }) => {
   const closeModal = (e) => {
     if (e.target === modalRef.current) {
       setShowModal(false);
+    } else {
+      console.log(e.target);
     }
   };
 
   return (
     showModal && (
-      <div className='Modal' onClick={closeModal} ref={modalRef}>
+      <div className='Modal' ref={modalRef} onClick={closeModal}>
         <div className='container'>{children}</div>
       </div>
     )
