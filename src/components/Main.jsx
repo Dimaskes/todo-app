@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Main = (props) => {
-  return <div className='Main'>Main</div>;
+const Main = ({ children }) => {
+  return <div className='Main'>{children}</div>;
 };
 
 export default Main;
