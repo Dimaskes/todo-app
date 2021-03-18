@@ -106,71 +106,71 @@
 
 /* Форма для добавления задачи */
 
-.AddNewTodo form {
+.TodoForm {
   padding: 1rem 1rem calc(1rem + 50px) 1rem;
-  width: 500px;
+  width: 100%;
   background-color: #fcfcfc;
 }
-.AddNewTodo form .text input {
+.TodoForm .text input {
   padding: 1rem;
   width: 100%;
   margin-bottom: 0.7rem;
   border: none;
   font-size: 1.2rem;
 }
-.AddNewTodo form .text input:focus {
+.TodoForm .text input:focus {
   outline: none;
   border-bottom: 1px solid #8f2d2d;
 }
-.AddNewTodo form .remind {
+.TodoForm .remind {
   display: flex;
   align-items: center;
   padding: 0.7rem;
 }
-.AddNewTodo form p {
+.TodoForm p {
   margin-left: 10px;
 }
-.AddNewTodo form .title {
+.TodoForm .title {
   display: flex;
   align-items: center;
   margin-bottom: 7px;
 }
-.AddNewTodo form .pick-day,
-.AddNewTodo form .pick-time {
+.TodoForm .pick-day,
+.TodoForm .pick-time {
   padding: 0 1.5rem 1rem 1.5rem;
 }
-.AddNewTodo form .pick-project {
+.TodoForm .pick-project {
   padding: 0.7rem;
 }
-.AddNewTodo form .pick-project .projects {
+.TodoForm .pick-project .projects {
   padding: 1rem 1rem 0 1rem;
   display: flex;
   flex-wrap: wrap;
 }
-.AddNewTodo form .pick-project .projects .project {
+.TodoForm .pick-project .projects .project {
   border: 1px solid #8f2d2d;
   border-radius: 5px;
-  padding: 3px;
+  padding: 6.5px;
   margin: 5px;
   cursor: pointer;
 }
-.AddNewTodo form .pick-project .projects .active {
+.TodoForm .pick-project .projects .active {
   color: #fcfcfc;
   background-color: #8f2d2d;
 }
-.AddNewTodo form .cancel {
+.TodoForm .cancel {
   position: absolute;
   top: 0;
   right: 5px;
   cursor: pointer;
 }
-.AddNewTodo form .confirm {
+.TodoForm .confirm {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
 }
-.AddNewTodo form .confirm button {
+.TodoForm .confirm button {
   width: 100%;
   height: 48px;
   background-color: #8f2d2d;
@@ -425,4 +425,37 @@
 }
 .Todo .todo-container .add-to-next-day {
   margin-right: 10px;
+}
+/* Редактирование выбранного дела */
+.EditTodo {
+  position: absolute;
+  bottom: 75px;
+  left: calc(40px + 450px + 40px);
+  border-radius: 10px;
+  color: #fcfcfc;
+  padding: 0 0.5rem 0.5rem 0.5rem;
+  width: 450px;
+  height: 80%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.EditTodo .header {
+  margin: 1rem 0;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #8f2d2d;
+}
+.EditTodo .TodoForm {
+  background: transparent;
+}
+.EditTodo .TodoForm .text input {
+  color: #fcfcfc;
+  background: transparent;
+}
+.EditTodo .TodoForm .MuiInput-formControl input {
+  color: #bebebe;
+}
+.EditTodo .TodoForm .pick-project .projects .project {
+  border: 1px solid #c77c7c;
 }
