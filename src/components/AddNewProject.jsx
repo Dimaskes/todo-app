@@ -7,6 +7,7 @@ import ProjectForm from './ProjectForm';
 const AddNewProject = () => {
   const [showModal, setShowModal] = React.useState(false);
   const [projectName, setProjectName] = React.useState('');
+
   function handleSubmit(e) {}
 
   return (

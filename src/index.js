@@ -1,8 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import { TodoContextProvider } from './context';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+  <TodoContextProvider>
+    <App />
+  </TodoContextProvider>,
+  document.getElementById('root'),
+);
 
 // из-за косяка в MaterialUI StrictMode выдает предупреждение
 // убрал, чтобы не убивать глаза

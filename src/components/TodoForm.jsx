@@ -14,11 +14,12 @@ const TodoForm = ({
   setDay,
   time,
   setTime,
+  todoProject,
+  setTodoProject,
   projects,
   showButtons = false,
   setShowModal = false,
 }) => {
-  console.log(projects);
   // для изменения стандартных цветов Material-ui
   const theme = createMuiTheme({
     palette: {
@@ -70,12 +71,18 @@ const TodoForm = ({
               <p>Choose a project</p>
             </div>
             <div className='projects'>
-              {projects.length !== 0 &&
+              {projects.length > 0 ? (
                 projects.map((project) => (
-                  <div className='project' key={project.id}>
+                  <div
+                    className={`project ${todoProject === project.name ? 'active' : ''}`}
+                    onClick={() => setTodoProject(project.name)}
+                    key={project.id}>
                     {project.name}
                   </div>
-                ))}
+                ))
+              ) : (
+                <span className='error'>Please add a project before proceeding</span>
+              )}
             </div>
           </div>
           {showButtons && (

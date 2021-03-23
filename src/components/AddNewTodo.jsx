@@ -1,13 +1,16 @@
 import React from 'react';
 import Modal from './Modal';
-
+import { TodoContext } from '../context';
 import TodoForm from './TodoForm';
 
 const AddNewTodo = () => {
+  const { selectedProject } = React.useContext(TodoContext);
+
   const [showModal, setShowModal] = React.useState(false);
   const [text, setText] = React.useState('');
   const [day, setDay] = React.useState(new Date());
   const [time, setTime] = React.useState(new Date());
+  const [todoProject, setTodoProject] = React.useState(selectedProject);
 
   const projects = [
     {
@@ -26,6 +29,10 @@ const AddNewTodo = () => {
       numOfTodos: 1,
     },
   ];
+
+  React.useEffect(() => {
+    setTodoProject(selectedProject);
+  }, [selectedProject]);
 
   function handleSubmit(e) {}
 
@@ -47,6 +54,8 @@ const AddNewTodo = () => {
           setDay={setDay}
           time={time}
           setTime={setTime}
+          todoProject={todoProject}
+          setTodoProject={setTodoProject}
           projects={projects}
           showButtons={true}
           setShowModal={setShowModal}

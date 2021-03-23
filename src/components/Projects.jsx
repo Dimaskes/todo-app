@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { Palette, PencilFill, CaretUp } from 'react-bootstrap-icons';
+import { TodoContext } from '../context';
 import AddNewProject from './AddNewProject';
 import Project from './Project';
 
@@ -9,23 +10,7 @@ const Projects = () => {
   const [edit, setEdit] = React.useState(false);
   const pencilColor = edit ? '#5ab95a' : '#fcfcfc';
 
-  const projects = [
-    {
-      id: 1,
-      name: 'test1',
-      numOfTodos: 0,
-    },
-    {
-      id: 2,
-      name: 'test2',
-      numOfTodos: 2,
-    },
-    {
-      id: 3,
-      name: 'test3',
-      numOfTodos: 1,
-    },
-  ];
+  const { projects } = React.useContext(TodoContext);
 
   return (
     <div className='Projects'>

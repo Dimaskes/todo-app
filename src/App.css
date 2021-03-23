@@ -158,6 +158,10 @@
   color: #fcfcfc;
   background-color: #8f2d2d;
 }
+.TodoForm .pick-project .projects .error {
+  color: red;
+  font-size: 0.9rem;
+}
 .TodoForm .cancel {
   position: absolute;
   top: 0;
@@ -172,7 +176,7 @@
 }
 .TodoForm .confirm button {
   width: 100%;
-  height: 48px;
+  height: 51px;
   background-color: #8f2d2d;
   color: #fcfcfc;
   font-size: 1.2rem;
@@ -458,4 +462,7 @@
 }
 .EditTodo .TodoForm .pick-project .projects .project {
   border: 1px solid #c77c7c;
+}
+.EditTodo .TodoForm .pick-project .projects .active {
+  background: #c77c7c;
 }
